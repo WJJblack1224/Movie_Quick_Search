@@ -1,6 +1,6 @@
 '''
 爬取開眼電影網的網站資料，快速查詢電影場次時間
-
+加入PyQt5使用者介面
 '''
 import requests
 from bs4 import BeautifulSoup
