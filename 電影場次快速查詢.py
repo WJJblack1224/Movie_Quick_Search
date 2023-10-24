@@ -9,7 +9,7 @@ import re
 #爬取本期首輪電影的名稱與對應的ID，存成字典  
 url = "http://www.atmovies.com.tw/movie/now/"
 rq = requests.get(url)
-rq.encoding="utf-8"
+rq.encoding = "utf-8"
 soup = BeautifulSoup(rq.text,"lxml")
 
 soups = soup.find("ul",'filmListPA')
