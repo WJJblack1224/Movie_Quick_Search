@@ -24,7 +24,7 @@ def _search():
     search_area = areaPost[0]
     movie_url = "http://www.atmovies.com.tw/showtime/"+search_movie+r"/"+search_area+r"/"    
     movie_rq = requests.get(movie_url)   
-    movie_rq.encoding="utf-8"
+    movie_rq.encoding = "utf-8"
     film_soup = BeautifulSoup(movie_rq.text,"lxml")
     film_soups = film_soup.find("div",{'id':'filmShowtimeBlock'})
     theaTers = []
@@ -53,7 +53,7 @@ moviePost = []   #預設的全域變數
 #爬取本期首輪電影的名稱與對應的ID，存成字典  
 url = "http://www.atmovies.com.tw/movie/now/"
 rq = requests.get(url)
-rq.encoding="utf-8"
+rq.encoding = "utf-8"
 soup = BeautifulSoup(rq.text,"lxml")
 soups = soup.find("ul",'filmListPA')
 movie = []
@@ -71,7 +71,7 @@ movieDict = dict(movieList)
 #爬取地區的對應ID，存成字典  
 area_url = "http://www.atmovies.com.tw/showtime/"
 area_rq = requests.get(area_url)
-area_rq.encoding="utf-8"
+area_rq.encoding = "utf-8"
 ar_soup = BeautifulSoup(area_rq.text,"lxml")
 area = []
 areaID = []
